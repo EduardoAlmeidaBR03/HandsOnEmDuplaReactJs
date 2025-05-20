@@ -16,6 +16,8 @@ import ProfilePage from '@pages/auth/ProfilePage';
 import ForgotPasswordPage from '@pages/auth/ForgotPasswordPage';
 import UpdatePasswordPage from '@pages/auth/UpdatePasswordPage';
 import AdminProductsPage from '@pages/admin/AdminProductsPage';
+import AdminProductTypesPage from '@pages/admin/AdminProductTypesPage';
+import AdminCreateProductTypePage from '@pages/admin/AdminCreateProductTypePage';
 
 function App() {
   const [cartItemCount, setCartItemCount] = useState(0);
@@ -87,6 +89,27 @@ function App() {
               element={
                 <AdminRoute>
                   <AdminUsersPage />
+                </AdminRoute>
+              } />
+            <Route
+              path="/admin/product-types"
+              element={
+                <AdminRoute>
+                  <AdminProductTypesPage />
+                </AdminRoute>
+              } />
+            <Route
+              path="/admin/product-types/new"
+              element={
+                <AdminRoute>
+                  <AdminCreateProductTypePage />
+                </AdminRoute>
+              } />
+            <Route
+              path="/admin/product-types/edit/:id"
+              element={
+                <AdminRoute>
+                  <AdminCreateProductTypePage />
                 </AdminRoute>
               } />
           </Routes>
