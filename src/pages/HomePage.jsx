@@ -33,3 +33,5 @@ const HomePage = ({ onAddToCart }) => {
 };
 
 export default HomePage;
+
+

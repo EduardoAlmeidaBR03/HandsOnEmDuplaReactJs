@@ -111,7 +111,7 @@ const AdminProductsPage = () => {
                             />
                           </td>
                           <td>{product.title}</td>
-                          <td>{product.product_types?.nome || '--'}</td>
+                          <td>{product.categories?.nome || '--'}</td>
                           <td className="one-line-cell">
                             {formatPrice(product.price)}
                           </td>

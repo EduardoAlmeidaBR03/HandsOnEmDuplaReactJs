@@ -10,7 +10,7 @@ const productTypeService = {
    */
   async getAllProductTypes() {
     const { data, error } = await supabase
-      .from('product_types')
+      .from('categories')
       .select('*')
       .order('nome', { ascending: true });
       
@@ -29,7 +29,7 @@ const productTypeService = {
    */
   async getProductTypeById(id) {
     const { data, error } = await supabase
-      .from('product_types')
+      .from('categories')
       .select('*')
       .eq('id', id)
       .single();
@@ -49,7 +49,7 @@ const productTypeService = {
    */
   async createProductType(productType) {
     const { data, error } = await supabase
-      .from('product_types')
+      .from('categories')
       .insert([productType])
       .select();
       
@@ -69,7 +69,7 @@ const productTypeService = {
    */
   async updateProductType(id, productType) {
     const { data, error } = await supabase
-      .from('product_types')
+      .from('categories')
       .update(productType)
       .eq('id', id)
       .select();
@@ -89,7 +89,7 @@ const productTypeService = {
    */
   async deleteProductType(id) {
     const { error } = await supabase
-      .from('product_types')
+      .from('categories')
       .delete()
       .eq('id', id);
       
