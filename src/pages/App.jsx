@@ -18,6 +18,9 @@ import UpdatePasswordPage from '@pages/auth/UpdatePasswordPage';
 import AdminProductsPage from '@pages/admin/AdminProductsPage';
 import AdminProductTypesPage from '@pages/admin/AdminProductTypesPage';
 import AdminCreateProductTypePage from '@pages/admin/AdminCreateProductTypePage';
+import AdminCarriersPage from '@pages/admin/AdminCarriersPage';
+import AdminCreateCarriersPage from '@pages/admin/AdminCreateCarriersPage';
+
 
 function App() {
   const [cartItemCount, setCartItemCount] = useState(0);
@@ -89,6 +92,20 @@ function App() {
               element={
                 <AdminRoute>
                   <AdminUsersPage />
+                </AdminRoute>
+              } />
+              <Route            
+              path="/admin/carriers"
+              element={
+                <AdminRoute>
+                  <AdminCarriersPage />
+                </AdminRoute>
+              } />
+              <Route            
+              path="/admin/carriers/new"
+              element={
+                <AdminRoute>
+                  <AdminCreateCarriersPage />
                 </AdminRoute>
               } />
             <Route
